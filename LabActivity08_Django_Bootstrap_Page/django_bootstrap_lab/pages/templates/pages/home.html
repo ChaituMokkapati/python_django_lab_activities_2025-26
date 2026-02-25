@@ -1,0 +1,54 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}Home | LabActivity{% endblock %}
+
+{% block content %}
+<div class="p-4 p-md-5 mb-4 rounded-3 bg-light">
+  <div class="container-fluid py-2">
+    <h1 class="display-6 fw-bold">Bootstrap Integrated</h1>
+    <p class="col-md-9 fs-5">
+      This page is rendered using a Django template and styled with Bootstrap.
+      We will reuse this layout for forms, tables, and carousels in upcoming experiments.
+    </p>
+    <a class="btn btn-primary btn-lg" href="#next">See upcoming Lab Activities</a>
+  </div>
+</div>
+
+<div class="alert alert-success" role="alert">
+  If you can see this alert with Bootstrap styling, integration is successful.
+</div>
+
+<h2 id="next" class="h4 mt-4 mb-3">Connections to upcoming labs</h2>
+
+<div class="row g-3">
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Bootstrap + Forms</h5>
+        <p class="card-text">Same base template can style Login/Registration pages.</p>
+        <button class="btn btn-outline-primary btn-sm" disabled>Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Tables & Grids</h5>
+        <p class="card-text">Display database data in Bootstrap tables and grid layouts.</p>
+        <button class="btn btn-outline-primary btn-sm" disabled>Next</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Carousels</h5>
+        <p class="card-text">Later we’ll add a Bootstrap carousel component.</p>
+        <button class="btn btn-outline-primary btn-sm" disabled>Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+# Common dependencies for Lab Activities 1–9
+# Tkinter is part of standard Python and requires no pip install.
+
+requests>=2.32.0
+beautifulsoup4>=4.12.0
+flask>=3.0.0
+bottle>=0.12.0
+django>=5.2.0

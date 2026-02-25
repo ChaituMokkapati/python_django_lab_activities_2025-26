@@ -1,0 +1,57 @@
+{% extends "pages/base.html" %}
+{% block title %}Carousel | LabActivity{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-3">Bootstrap Carousel (Lab Activity 10)</h1>
+
+{% if slides %}
+  <div id="labCarousel" class="carousel slide mb-4 mx-auto" style="max-width: 760px;" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      {% for s in slides %}
+        <button type="button"
+                data-bs-target="#labCarousel"
+                data-bs-slide-to="{{ forloop.counter0 }}"
+                class="{% if forloop.first %}active{% endif %}"
+                aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+                aria-label="Slide {{ forloop.counter }}">
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="carousel-inner rounded-3 shadow-sm">
+      {% for s in slides %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}" data-bs-interval="5000">
+          <img src="{{ s.image_url }}" class="d-block w-100" style="height: 320px; object-fit: cover;" alt="{{ s.title }}">
+          <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+            <h5 class="mb-1">{{ s.title }}</h5>
+            {% if s.caption %}<p class="mb-0">{{ s.caption }}</p>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#labCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#labCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="alert alert-info">
+    Slides are loaded from the database (Slide model). You can manage them in <strong>Django Admin</strong>.
+  </div>
+{% else %}
+  <div class="alert alert-warning">
+    No slides found. Add slides in Admin or via Django shell.
+  </div>
+{% endif %}
+
+<div class="d-flex gap-2">
+  <a class="btn btn-outline-secondary" href="{% url 'home' %}">Back to Home</a>
+  <a class="btn btn-outline-primary" href="{% url 'product_table' %}">Products Table</a>
+  <a class="btn btn-outline-primary" href="{% url 'product_grid' %}">Products Grid</a>
+</div>
+{% endblock %}
