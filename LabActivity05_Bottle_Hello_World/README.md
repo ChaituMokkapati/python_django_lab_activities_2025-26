@@ -29,3 +29,9 @@ Academic Year: **2025–26**
 Phone: **<PHONE_NUMBER_PLACEHOLDER>**  
 Email: **<EMAIL_PLACEHOLDER>**  
 GitHub Repo: **<GITHUB_REPO_LINK_PLACEHOLDER>**
+
+## Contact
+- GitHub Repo: https://github.com/ChaituMokkapati/python_django_lab_activities_2025-26.git
+- Email: chaitanyamokkapati0@gmail.com
+- Phone: +91 6281487836
+
