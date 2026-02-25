@@ -26,9 +26,6 @@ python manage.py runserver
 
 ---
 **Watermark (do not remove):**  
-Prepared by **Chaitanya Mokkapati**, Assistant Professor  
-DVR & Dr. HS MIC College of Technology  
-Academic Year: **2025–26**  
 
 ## Watermark
 Prepared by **Chaitanya Mokkapati**, Assistant Professor  
@@ -37,4 +34,3 @@ Academic Year: **2025-26**
 Phone: **+91 6281487836**  
 Email: **chaitanyamokkapati0@gmail.com**  
 GitHub Repo: **[<GITHUB_REPO_LINK_PLACEHOLDER>](https://github.com/ChaituMokkapati/python_django_lab_activities_2025-26.git)**
-
