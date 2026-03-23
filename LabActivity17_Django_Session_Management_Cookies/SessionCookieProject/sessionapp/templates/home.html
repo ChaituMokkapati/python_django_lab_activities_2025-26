@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Home</title>
+</head>
+<body>
+    <h2>Django Session and Cookie Demo</h2>
+
+    <form method="post" action="{% url 'start_session' %}">
+        {% csrf_token %}
+        <label>Username:</label>
+        <input type="text" name="username" value="{{ saved_name }}" required>
+        <br><br>
+
+        <label>Preferred Theme:</label>
+        <select name="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Start Session</button>
+    </form>
+
+    <p>Remembered Name from Cookie: {{ saved_name }}</p>
+    <a href="{% url 'clear_cookies' %}">Clear Cookies</a>
+</body>
+</html>

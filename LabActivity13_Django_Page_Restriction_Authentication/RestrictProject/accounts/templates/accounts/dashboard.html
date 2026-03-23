@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restricted Page</title>
+</head>
+<body>
+<h2>Restricted Dashboard</h2>
+<p>Welcome, {{ user.username }}. You are logged in and allowed to view this page.</p>
+
+<a href="{% url 'home' %}">Home</a><br><br>
+<a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

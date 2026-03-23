@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Static Files Demo</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'images/django-logo.png' %}" alt="Django Logo" class="logo">
+        <h1>Django Static Files Demo</h1>
+        <p>This page uses CSS, JavaScript, and image files loaded through Django static settings.</p>
+        <button id="welcomeBtn">Click Me</button>
+    </div>
+</body>
+</html>

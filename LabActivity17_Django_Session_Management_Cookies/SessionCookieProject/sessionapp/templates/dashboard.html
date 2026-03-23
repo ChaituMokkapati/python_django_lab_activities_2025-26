@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Session Dashboard</h2>
+
+    <p><b>Session Key:</b> {{ session_key }}</p>
+    <p><b>Username:</b> {{ username }}</p>
+    <p><b>Theme in Session:</b> {{ theme }}</p>
+    <p><b>Visit Count:</b> {{ visit_count }}</p>
+    <p><b>Login Status:</b> {{ login_status }}</p>
+    <hr>
+    <p><b>Name Cookie:</b> {{ cookie_name }}</p>
+    <p><b>Theme Cookie:</b> {{ cookie_theme }}</p>
+
+    <a href="{% url 'dashboard' %}">Refresh Dashboard</a><br>
+    <a href="{% url 'clear_session' %}">Clear Session</a><br>
+    <a href="{% url 'clear_cookies' %}">Clear Cookies</a>
+</body>
+</html>
